@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "TTLakes";
+    src: url(/fond/TTLakes-Regular.ttf);
+}
+
+body {
+    font-family: "TT Lakes", sans-serif;
+}
+
+.menu__container {
+    width: 320px;
+    height: 100vh;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),-2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    padding: 0px 36px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menu__header {
+    padding-top: 19px;
+    display: flex;
+    gap: 17px;
+}
+
+.menu__header-search {
+    margin-left: auto;
+}
+
+.menu__header-close,
+.menu__header-search,
+.menu__header-logo {
+    transition: 0.5s;
+}
+
+.menu__header-close:hover,
+.menu__header-search:hover,
+.menu__footer__active-item:hover {
+    filter: drop-shadow(0px 0px 5px rgb(255, 62, 121));
+    scale: 1.1;
+}
+
+.menu__header-logo:hover {
+    scale: 1.1;
+}
+
+.menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    flex: 1 0 auto;
+}
+
+.menu__nav-item a {
+    position: relative;
+    color: rgb(27, 28, 33);
+}
+
+.menu__nav-item-active a {
+    color: rgb(126, 126, 130);
+}
+
+.menu__nav-item-active a::before {
+    content: "";
+    display: block;
+    background-color: rgb(65, 246, 215);
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    border-radius: 0 5px 5px 0;
+    left: -36px;
+    top: -4px;
+}
+
+.menu__nav-item a:hover {
+    color: rgb(126, 126, 130);
+    font-weight: 600;
+}
+
+.menu__nav-item a:hover::before {
+    content: "";
+    display: block;
+    background-color: rgb(65, 246, 215);
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    border-radius: 0 5px 5px 0;
+    left: -36px;
+    top: -4px;
+}
+
+.menu__footer {
+    display: flex;
+    flex-direction: column;
+}
+.menu__footer__active-items {
+    display: flex;
+    gap: 16px;
+
+}
+
+.menu__footer__active-item {
+    transition: 0.5s;
+}
+
+.menu__footer__active-item:first-child:hover img{
+    transform: rotate(-10deg);
+}
+
+.menu__footer-email {
+    padding-top: 16px;
+    color: rgb(27, 28, 33);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.menu__footer-phone-number {
+    padding-top: 12px;
+    color: rgb(27, 28, 33);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+}
+
+.menu__footer-anguage-selection {
+    padding-top: 40px;
+    padding-bottom: 32px;
+    display: flex;
+    gap: 7px;
+}
+
+.menu__footer-anguage-selection-item a{
+    text-decoration: none;
+    color: rgb(27, 28, 33);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.menu__footer-anguage-selection-item a:hover{
+    color: rgb(126, 126, 130);
+    font-weight: 600;
+}
+
+.menu__footer-anguage-selection-item-activ a{
+    color: rgb(126, 126, 130);
+}
